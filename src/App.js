@@ -1,5 +1,6 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import { useState } from 'react';
 
 const tweetsArray = [
   {
@@ -35,8 +36,10 @@ const tweetsArray = [
 ];
 
 function App() {
+  const [ theme, setTheme ] = useState('light');
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
+      <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Change theme</button>
       <Tweet tweet={ tweetsArray[0] }/>
       <Tweet tweet={ tweetsArray[1] }/>
       <Tweet tweet={ tweetsArray[2] }/>

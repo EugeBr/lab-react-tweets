@@ -85,3 +85,11 @@ body {
   justify-content: space-between;
   color: #536471;
 }
+
+.dark, .dark > div{
+  background-color: black;
+}
+
+.dark > div p , .dark > div span{
+  color: white;
+}
